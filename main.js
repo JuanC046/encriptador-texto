@@ -1,11 +1,23 @@
-let escritura__input = "Holao MundoLatinooooo!";
-console.log(escritura__input);
 // Lista de letras que se modifican
-let letras = ["a", "e", "i", "o", "u"];
+const letras = ["a", "e", "i", "o", "u"];
 // Lista de las claves de encriptación
-let claves = ["enter", "imes", "ai", "ober", "ufat"];
+const claves = ["enter", "imes", "ai", "ober", "ufat"];
+
+// Función para obtener el texto de entrada
+function obtenerTexto() {
+    let escritura__input = document.getElementById("texto_input").value;
+   // console.log(escritura__input);
+   return escritura__input;
+}
+
+// Función para setear el texto de salida
+function mostrarResultado(texto) {
+    document.getElementById("texto_output").textContent = texto;
+}
+
 // Función para encriptar el texto
-function encriptar(texto) {
+function encriptar() {
+    let texto = obtenerTexto();
     let resultado = "";
     for (let i = 0; i < texto.length; i++) {
         let caracter = texto[i];
@@ -15,12 +27,16 @@ function encriptar(texto) {
         }
         resultado += caracter;
     }
-    return resultado;
+    // Mostrar el resultado
+    mostrarResultado(resultado);
+    
+    return;
 }
-console.log(encriptar(escritura__input));
+
 
 // Función para desencriptar el texto
-function desencriptar(texto) {
+function desencriptar() {
+    let texto = obtenerTexto();
     let resultado = "";
     let lista_palabras = texto.split(" ");
     let palabra = "";
@@ -46,6 +62,9 @@ function desencriptar(texto) {
     // Eliminar el último espacio
     resultado = resultado.substring(0, resultado.length - 1);
 
-    return resultado;
+    // Mostrar el resultado
+    mostrarResultado(resultado);
+    return;
 }
-console.log(desencriptar(encriptar(escritura__input)));
+
+
