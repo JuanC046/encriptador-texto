@@ -3,9 +3,23 @@ const letras = ["a", "e", "i", "o", "u"];
 // Lista de las claves de encriptación
 const claves = ["enter", "imes", "ai", "ober", "ufat"];
 
+// Función para validación del texto permitido
+function validarTexto(texto) {
+    // [^...] Se hace negación/prohibición de los caracteres enmarcads
+    // [^A-ZÁÉÍÓÚáéíóúÑñ] Conjunto de caracteres NO permitidos
+    const regex = /^[^A-ZÀ-ÿ]*$/;
+    return regex.test(texto);
+  }
+
 // Función para obtener el texto de entrada
 function obtenerTexto() {
     let escritura__input = document.getElementById("texto_input").value;
+    if (!validarTexto(escritura__input)){
+        //Si el texto contiene caracteres prohibidos
+        alert("Solo letras minúsculas y sin acentos")
+        return "";
+    }
+        
     // console.log(escritura__input);
     return escritura__input;
 }
