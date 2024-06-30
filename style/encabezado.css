@@ -1,0 +1,26 @@
+.encabezado{
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    padding: 2% 0 0 2%;
+}
+.encabezado__imagen{
+    width: 4rem;
+    height: 4rem;
+}
+.encabezado__imagen-relleno{
+    fill: var(--white);
+}
+.encabezado__titulo{
+    font-size: 2.5rem;
+    font-family: var(--font-title);
+    color: var(--dark-400);
+}
+
+@media screen and (max-width: 600px){
+    .encabezado{
+        display: flex;
+        align-items: center;
+        padding: 5%;
+    }
+}
