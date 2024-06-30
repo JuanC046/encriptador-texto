@@ -12,7 +12,23 @@ function obtenerTexto() {
 
 // Función para setear el texto de salida
 function mostrarResultado(texto) {
-    document.getElementById("texto_output").textContent = texto;
+    let resultado_sin_texto = document.getElementById("resultado_sin_texto");
+    let texto_output = document.getElementById("texto_output");
+    let boton_copiar = document.getElementById("boton_copiar");
+    if (texto === "") {
+        // Quitar clase hidden de resultado_sin_texto
+        resultado_sin_texto.classList.remove("hidden");
+        texto_output.classList.add("hidden");
+        boton_copiar.classList.add("hidden");
+    }
+    else {
+        // Agregar clase hidden a resultado_sin_texto
+        resultado_sin_texto.classList.add("hidden");
+        texto_output.classList.remove("hidden");
+        boton_copiar.classList.remove("hidden");
+        texto_output.textContent = texto;
+    }
+    return;
 }
 
 // Función para encriptar el texto

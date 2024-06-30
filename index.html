@@ -3,11 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Juan Camilo" />
+        <meta
+            name="description"
+            content="Encriptador de texto que permite encriptar y desencriptar mensajes."
+        />
+
         <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="./style/main.css" />
+        <link rel="icon" type="image/png" href="/assets/logo.png" />
     </head>
     <body>
         <header class="encabezado">
-            <img class="encabezado__imagen" alt="Logo encriptador" />
+            <img
+                class="encabezado__imagen"
+                src="./assets/logo.png"
+                alt="Logo encriptador"
+            />
             <h1 class="encabezado__titulo">Encriptador de Texto</h1>
         </header>
 
@@ -17,28 +29,43 @@
                     name="texto_input"
                     id="texto_input"
                     class="escritura__input"
+                    placeholder="Ingrese el texto aquí..."
                 ></textarea>
                 <p class="escritura__mensaje">
                     <img
                         class="escritura__mensaje__icono"
+                        src="./assets/exclamacion.png"
                         alt="Icono de exclamación"
                     />
                     Solo letras minúsculas y sin acentos
                 </p>
-                <button class="escritura__botonEncriptar" onclick="encriptar();">
-                    <img class="icono_boton" src="" alt="Icono encriptar" />
-                    Encriptar
-                </button>
-                <button class="escritura__botonDesencriptar" onclick="desencriptar();">
-                    <img class="icono_boton" src="" alt="Icono desencriptar" />
-                    Desencriptar
-                </button>
+                <div class="escritura__botones">
+                    <button class="boton_dark" onclick="encriptar();">
+                        <img
+                            class="icono_boton"
+                            src="./assets/encriptar.png"
+                            alt="Icono encriptar"
+                        />
+                        <p class="texto_boton">Encriptar</p>
+                    </button>
+                    <button
+                        class="boton_light boton_desencriptar"
+                        onclick="desencriptar();"
+                    >
+                        <img
+                            class="icono_boton"
+                            src="./assets/desencriptar.png"
+                            alt="Icono desencriptar"
+                        />
+                        <p class="texto_boton">Desencriptar</p>
+                    </button>
+                </div>
             </section>
             <section class="resultado">
-                <div class="resultado__esperaTexto">
+                <div id="resultado_sin_texto" class="resultado__esperaTexto">
                     <img
                         class="resultado__esperaTexto__imagen"
-                        src=""
+                        src="./assets/Muneco.png"
                         alt="Imagen espera de texto"
                     />
                     <h3 class="resultado__esperaTexto__subtitulo">
@@ -48,18 +75,32 @@
                         Ingresa el texto que desees encriptar o desencriptar.
                     </p>
                 </div>
-                <p id="texto_output" class="resultado__texto"></p>
-                <button class="resultado__botonCopiar">
-                    <img class="icono_boton" src="" alt="Icono Copiar" />
-                    Copiar
+                <p id="texto_output" class="resultado__texto hidden"></p>
+                <button
+                    id="boton_copiar"
+                    class="boton_light boton_copiar hidden"
+                >
+                    <img
+                        class="icono_boton"
+                        src="./assets/copiar.png"
+                        alt="Icono Copiar"
+                    />
+                    <p class="texto_boton">Copiar</p>
                 </button>
             </section>
         </main>
 
-        <footer>
+        <footer class="footer">
             <!--Revisar que poner en el footer-->
-            <p>Hecho por Juan Camilo - 2024</p>
-            <a href="https://github.com/JuanC046">GitHub</a>
+            <h3>Hecho por Juan Camilo - 2024</h3>
+            <a class="footer__boton" href="https://github.com/JuanC046"
+                >GitHub</a
+            >
+            <p class="footer__texto">
+                Challenge Encriptador de Texto <br />
+                Alura Latam <br />
+                Programa OracleOne
+            </p>
         </footer>
         <script src="main.js" defer></script>
     </body>
