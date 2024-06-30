@@ -242,3 +242,48 @@ body{
 .hidden{
     display: none;
 }
+
+
+/* Media queries */
+/* Tablets */
+@media screen and (max-width: 1200px){
+    .principal{
+        flex-direction: column;
+        padding: 3% 5% 5% 5%;
+    }
+    .escritura{
+        width: 100%;
+        height: 50%;
+    }
+    .escritura__botones{
+        justify-content: center;
+    }
+    .boton_dark{
+        width: 50%;
+    }
+    .boton_desencriptar{
+        width: 50%;
+    }
+    .resultado{
+        width: 100%;
+        height: auto;
+        max-height: 30vh;
+        padding-bottom: 0.5rem;
+    }
+    .resultado__esperaTexto__imagen{
+        display: none;
+    }
+    .resultado__esperaTexto__subtitulo{
+        font-size: 1rem;
+    }
+    .resultado__esperaTexto__info{
+        font-size: 0.75rem;
+    }
+    .resultado__texto{
+        font-size: 1rem;
+    }
+    .footer__boton{
+        width: 20%;
+    }
+}
+
