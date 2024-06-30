@@ -10,6 +10,8 @@
 /* Variables de estilo */
 :root {
     --white: #FFFFFF;
+    --success: #2ECC71;
+    --error: #E74C3C;
     --dark-100: #ADABD9;
     --dark-200: #9290C3;
     --dark-300: #535C91;
@@ -203,6 +205,17 @@ body{
 .boton_copiar{
     margin-top: 5%;
     width: 80%;
+}
+.copiado {
+    display: flex;
+    justify-content: center;
+    gap: 0%;
+    color: var(--dark-300);
+    font-family: var(--font-text);
+    border: 1px solid var(--light-100);
+    border-radius: 24px;
+    padding: 27px;
+    background-color: var(--success);
 }
 
 .footer{

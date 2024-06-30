@@ -6,8 +6,8 @@ const claves = ["enter", "imes", "ai", "ober", "ufat"];
 // Función para obtener el texto de entrada
 function obtenerTexto() {
     let escritura__input = document.getElementById("texto_input").value;
-   // console.log(escritura__input);
-   return escritura__input;
+    // console.log(escritura__input);
+    return escritura__input;
 }
 
 // Función para setear el texto de salida
@@ -20,8 +20,7 @@ function mostrarResultado(texto) {
         resultado_sin_texto.classList.remove("hidden");
         texto_output.classList.add("hidden");
         boton_copiar.classList.add("hidden");
-    }
-    else {
+    } else {
         // Agregar clase hidden a resultado_sin_texto
         resultado_sin_texto.classList.add("hidden");
         texto_output.classList.remove("hidden");
@@ -45,10 +44,9 @@ function encriptar() {
     }
     // Mostrar el resultado
     mostrarResultado(resultado);
-    
+
     return;
 }
-
 
 // Función para desencriptar el texto
 function desencriptar() {
@@ -83,4 +81,23 @@ function desencriptar() {
     return;
 }
 
+// Función para copiar el texto de salida
+function copiarTexto() {
+    let boton_copiar = document.getElementById("boton_copiar");
+    let texto_boton = document.getElementById("texto_boton_copiar");
+    // Almacenar el texto de salida
+    let texto_output = document.getElementById("texto_output").textContent;
+    // Copiar el texto al portapapeles
+    navigator.clipboard.writeText(texto_output);
+    // Cambiar el texto del botón y el color
+    texto_boton.textContent = "Copiado!";
+    boton_copiar.classList.remove("boton_light");
+    boton_copiar.classList.add("copiado");
+    setTimeout(() => {
+        texto_boton.textContent = "Copiar";
+        boton_copiar.classList.remove("copiado");
+        boton_copiar.classList.add("boton_light");
+    }, 1000);
 
+    return;
+}
