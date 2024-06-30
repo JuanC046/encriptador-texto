@@ -1,5 +1,5 @@
 // Lista de letras que se modifican
-const letras = ["a", "e", "i", "o", "u"];
+const letras = ["e", "i", "a", "o", "u"];
 // Lista de las claves de encriptación
 const claves = ["enter", "imes", "ai", "ober", "ufat"];
 
