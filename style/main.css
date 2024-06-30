@@ -186,6 +186,7 @@ body{
 }
 
 .resultado__texto{
+    margin-top: 5%;
     width: 80%;
     height: 100%;
     overflow: scroll;
@@ -200,6 +201,7 @@ body{
 }
 
 .boton_copiar{
+    margin-top: 5%;
     width: 80%;
 }
 
@@ -267,23 +269,69 @@ body{
     .resultado{
         width: 100%;
         height: auto;
-        max-height: 30vh;
+        max-height: 50%;
         padding-bottom: 0.5rem;
     }
     .resultado__esperaTexto__imagen{
         display: none;
     }
-    .resultado__esperaTexto__subtitulo{
-        font-size: 1rem;
-    }
-    .resultado__esperaTexto__info{
-        font-size: 0.75rem;
-    }
-    .resultado__texto{
-        font-size: 1rem;
+    .footer{
+        margin-top: 10%;
     }
     .footer__boton{
         width: 20%;
     }
 }
 
+/* Celulares */
+@media screen and (max-width: 600px){
+    .encabezado{
+        display: flex;
+        align-items: center;
+        gap: 4%;
+        padding: 5%;
+    }
+    .encabezado__imagen{
+        width: 4rem;
+        height: 4rem;
+    }
+    .principal{
+        flex-direction: column;
+        padding: 5%;
+        height: 100vh;
+        gap: 5%;
+    }
+    .escritura{
+        width: 100%;
+        height: 60%;
+    }
+    .escritura__botones{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    .boton_dark{
+        width: 100%;
+    }
+    .boton_desencriptar{
+        width: 100%;
+    }
+    .resultado{
+        width: 100%;
+        height: auto;
+        max-height: 50%;
+        padding-bottom: 0.5rem;
+    }
+    .resultado__esperaTexto__imagen{
+        display: none;
+    }
+    .footer{
+        margin-top: 30%;
+    }
+    .footer__boton{
+        width: 50%;
+    }
+}
