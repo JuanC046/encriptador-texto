@@ -59,7 +59,7 @@ Este proyecto consiste en desarrollar una aplicación web capaz de encriptar y d
 
 ## 📖 Instrucciones de Uso en la Web
 
-1. Accede a través del siguiente enlace:  [Encriptador de Texto](LICENSE)
+1. Accede a través del siguiente enlace:  [Encriptador de Texto](https://juanc046.github.io/encriptador-texto/)
 3. Escribe el texto que deseas encriptar o desencriptar en el campo correspondiente.
 4. Selecciona la opción (Encriptar/Desencriptar).
 5. Haz clic en el botón para ver el resultado.
